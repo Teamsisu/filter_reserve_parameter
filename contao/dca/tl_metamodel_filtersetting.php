@@ -22,8 +22,12 @@
 
 $GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['metapalettes']['reserve_parameter extends default'] = array
 (
-	'+config' => array('attr_id', 'urlparam', 'label', 'template'),
+	'+config' => array('urlparam', 'label', 'template'),
 );
+//$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['metapalettes']['reserve_parameter extends default'] = array
+//(
+//	'+config' => array('attr_id', 'urlparam', 'label', 'template'),
+//);
 //
 //$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['fields']['reserverparametersearch'] = array
 //(
