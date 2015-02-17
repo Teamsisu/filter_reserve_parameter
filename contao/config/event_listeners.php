@@ -16,7 +16,7 @@
  */
 
 use MetaModels\Filter\Setting\Events\CreateFilterSettingFactoryEvent;
-use MetaModels\Filter\Setting\TextFilterSettingTypeFactory;
+use MetaModels\Filter\Setting\ReserveParameterFilterSettingTypeFactory;
 use MetaModels\MetaModelsEvents;
 
 return array
