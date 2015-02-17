@@ -20,17 +20,17 @@
  * @filesource
  */
 
-$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['metapalettes']['text extends default'] = array
+$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['metapalettes']['reserve_parameter extends default'] = array
 (
-	'+config' => array('attr_id', 'urlparam', 'label', 'template', 'reserverparametersearch'),
+	'+config' => array('attr_id', 'urlparam', 'label', 'template'),
 );
-
-$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['fields']['reserverparametersearch'] = array
-(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['reserverparametersearch'],
-	'exclude'                 => true,
-	'inputType'               => 'select',
-	'options'                 => array('exact','beginswith','endswith'),
-	'reference'               => $GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['references'],
-	'eval'                    => array('tl_class' => 'w50', 'includeBlankOption' => true)
-);
+//
+//$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['fields']['reserverparametersearch'] = array
+//(
+//	'label'                   => &$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['reserverparametersearch'],
+//	'exclude'                 => true,
+//	'inputType'               => 'select',
+//	'options'                 => array('exact','beginswith','endswith'),
+//	'reference'               => $GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['references'],
+//	'eval'                    => array('tl_class' => 'w50', 'includeBlankOption' => true)
+//);
