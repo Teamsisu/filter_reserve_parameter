@@ -20,7 +20,7 @@ namespace MetaModels\Filter\Setting;
 /**
  * Attribute type factory for text filter settings.
  */
-class TextFilterSettingTypeFactory extends AbstractFilterSettingTypeFactory
+class ReserveParameterFilterSettingTypeFactory extends AbstractFilterSettingTypeFactory
 {
     /**
      * {@inheritDoc}
@@ -31,8 +31,8 @@ class TextFilterSettingTypeFactory extends AbstractFilterSettingTypeFactory
 
         $this
             ->setTypeName('text')
-            ->setTypeIcon('system/modules/metamodelsfilter_text/html/filter_text.png')
-            ->setTypeClass('MetaModels\Filter\Setting\Text')
+            ->setTypeIcon('system/modules/metamodelsfilter_reserve_parameter/html/filter_text.png')
+            ->setTypeClass('MetaModels\Filter\Setting\PreserveParameter')
             ->allowAttributeTypes();
 
         foreach (array(
@@ -40,6 +40,7 @@ class TextFilterSettingTypeFactory extends AbstractFilterSettingTypeFactory
                      'text',
                      'translatedtext',
                      'translatedlongtext',
+                     'date',
                  ) as $attribute) {
             $this->addKnownAttributeType($attribute);
         }

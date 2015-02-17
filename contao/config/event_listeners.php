@@ -23,7 +23,7 @@ return array
 (
     MetaModelsEvents::FILTER_SETTING_FACTORY_CREATE => array(
         function (CreateFilterSettingFactoryEvent $event) {
-            $event->getFactory()->addTypeFactory(new TextFilterSettingTypeFactory());
+            $event->getFactory()->addTypeFactory(new ReserveParameterFilterSettingTypeFactory());
         }
     )
 );

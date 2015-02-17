@@ -37,7 +37,7 @@ use MetaModels\FrontendIntegration\FrontendFilterOptions;
  * @author        Christian de la Haye <service@delahaye.de>
  * @author        Stefan Heimes <stefan_heimes@hotmail.com>
  */
-class Text extends SimpleLookup
+class ReserveParameter extends Simple
 {
     /**
      * Overrides the parent implementation to always return true, as this setting is always optional.
@@ -83,40 +83,43 @@ class Text extends SimpleLookup
      */
     public function prepareRules(IFilter $objFilter, $arrFilterUrl)
     {
-        $objMetaModel  = $this->getMetaModel();
-        $objAttribute  = $objMetaModel->getAttributeById($this->get('attr_id'));
-        $strParamName  = $this->getParamName();
-        $strParamValue = $arrFilterUrl[$strParamName];
-        $strTextsearch = $this->get('textsearch');
-
-        // React on wildcard, overriding the search type.
-        if (strpos($strParamValue, '*') !== false) {
-            $strTextsearch = 'exact';
-        }
-
-        // Type of search.
-        switch ($strTextsearch) {
-            case 'beginswith':
-                $strWhat = $strParamValue . '%';
-                break;
-            case 'endswith':
-                $strWhat = '%' . $strParamValue;
-                break;
-            case 'exact':
-                $strWhat = $strParamValue;
-                break;
-            default:
-                $strWhat = '%' . $strParamValue . '%';
-                break;
-        }
-
-        if ($objAttribute && $strParamName && $strParamValue) {
-
-            $objFilter->addFilterRule(new SearchAttribute($objAttribute, $strWhat));
-            return;
-        }
+//        $objMetaModel  = $this->getMetaModel();
+//        $objAttribute  = $objMetaModel->getAttributeById($this->get('attr_id'));
+//        $strParamName  = $this->getParamName();
+//        $strParamValue = $arrFilterUrl[$strParamName];
+//        $strTextsearch = $this->get('textsearch');
+//
+//        // React on wildcard, overriding the search type.
+//        if (strpos($strParamValue, '*') !== false) {
+//            $strTextsearch = 'exact';
+//        }
+//
+//        // Type of search.
+//        switch ($strTextsearch) {
+//            case 'beginswith':
+//                $strWhat = $strParamValue . '%';
+//                break;
+//            case 'endswith':
+//                $strWhat = '%' . $strParamValue;
+//                break;
+//            case 'exact':
+//                $strWhat = $strParamValue;
+//                break;
+//            default:
+//                $strWhat = '%' . $strParamValue . '%';
+//                break;
+//        }
+//
+//        if ($objAttribute && $strParamName && $strParamValue) {
+//
+//            $objFilter->addFilterRule(new SearchAttribute($objAttribute, $strWhat));
+//            return;
+//        }
+//
+//
 
         $objFilter->addFilterRule(new StaticIdList(null));
+
     }
 
     /**

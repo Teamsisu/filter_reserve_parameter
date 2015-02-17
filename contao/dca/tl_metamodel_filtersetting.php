@@ -22,12 +22,12 @@
 
 $GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['metapalettes']['text extends default'] = array
 (
-	'+config' => array('attr_id', 'urlparam', 'label', 'template', 'textsearch'),
+	'+config' => array('attr_id', 'urlparam', 'label', 'template', 'reserverparametersearch'),
 );
 
-$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['fields']['textsearch'] = array
+$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['fields']['reserverparametersearch'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['textsearch'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_metamodel_filtersetting']['reserverparametersearch'],
 	'exclude'                 => true,
 	'inputType'               => 'select',
 	'options'                 => array('exact','beginswith','endswith'),
