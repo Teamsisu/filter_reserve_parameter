@@ -30,7 +30,7 @@ class ReserveParameterFilterSettingTypeFactory extends AbstractFilterSettingType
         parent::__construct();
 
         $this
-            ->setTypeName('text')
+            ->setTypeName('reserve_parameter')
             ->setTypeIcon('system/modules/metamodelsfilter_reserve_parameter/html/filter_text.png')
             ->setTypeClass('MetaModels\Filter\Setting\ReserveParameter')
             ->allowAttributeTypes();
