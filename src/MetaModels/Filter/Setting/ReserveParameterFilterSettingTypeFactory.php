@@ -40,7 +40,7 @@ class ReserveParameterFilterSettingTypeFactory extends AbstractFilterSettingType
                      'text',
                      'translatedtext',
                      'translatedlongtext',
-                     'date',
+                     'datetime',
                  ) as $attribute) {
             $this->addKnownAttributeType($attribute);
         }
